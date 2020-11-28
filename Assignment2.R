@@ -1,6 +1,3 @@
-x <- c(1,1,1,1)
-dim(x)<-c(2,2)
-
 makeCacheMatrix <- function(x = matrix()) {
 m <- NULL
 set <- function(y) {
@@ -27,6 +24,10 @@ cacheSolve <- function(x, ...) {
   m
 }
 
-m <- matrix(rnorm(16),4,4)
+## Text
+m<- c(1,1,0,1,0,1,0,1,0)
+dim(m)<-c(3,3)
+m
+
 makeCacheMatrix(m)
 cacheSolve(makeCacheMatrix(m))
